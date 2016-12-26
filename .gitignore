@@ -10,3 +10,4 @@ docs/_build
 .coverage
 .tox
 cover
+env

@@ -22,6 +22,8 @@ class CSVJoin(CSVKitUtility):
                                     help='Perform a left outer join, rather than the default inner join. If more than two files are provided this will be executed as a sequence of left outer joins, starting at the left.')
         self.argparser.add_argument('--right', dest='right_join', action='store_true',
                                     help='Perform a right outer join, rather than the default inner join. If more than two files are provided this will be executed as a sequence of right outer joins, starting at the right.')
+        self.argparser.add_argument('--ignorecase', dest='ignore_case', action='store_true',
+                                    help='Whether to ignore string case when comparing keys.')
 
     def main(self):
         self.input_files = []
@@ -62,10 +64,11 @@ class CSVJoin(CSVKitUtility):
 
         jointab = tables[0]
 
+        ignore_case = self.args.ignore_case
         if self.args.left_join:
             # Left outer join
             for i, t in enumerate(tables[1:]):
-                jointab = join.left_outer_join(jointab, join_column_ids[0], t, join_column_ids[i + 1], header=header)
+                jointab = join.left_outer_join(jointab, join_column_ids[0], t, join_column_ids[i + 1], header=header, ignore_case=ignore_case)
         elif self.args.right_join:
             # Right outer join
             jointab = tables[-1]
@@ -74,15 +77,15 @@ class CSVJoin(CSVKitUtility):
             remaining_tables.reverse()
 
             for i, t in enumerate(remaining_tables):
-                jointab = join.right_outer_join(t, join_column_ids[-(i + 2)], jointab, join_column_ids[-1], header=header)
+                jointab = join.right_outer_join(t, join_column_ids[-(i + 2)], jointab, join_column_ids[-1], header=header, ignore_case=ignore_case)
         elif self.args.outer_join:
             # Full outer join
             for i, t in enumerate(tables[1:]):
-                jointab = join.full_outer_join(jointab, join_column_ids[0], t, join_column_ids[i + 1], header=header)
+                jointab = join.full_outer_join(jointab, join_column_ids[0], t, join_column_ids[i + 1], header=header, ignore_case=ignore_case)
         elif self.args.columns:
             # Inner join
             for i, t in enumerate(tables[1:]):
-                jointab = join.inner_join(jointab, join_column_ids[0], t, join_column_ids[i + 1], header=header)
+                jointab = join.inner_join(jointab, join_column_ids[0], t, join_column_ids[i + 1], header=header, ignore_case=ignore_case)
         else:
             # Sequential join
             for t in tables[1:]:
