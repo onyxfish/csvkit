@@ -295,12 +295,13 @@ class CSVKitUtility(object):
             type_kwargs = {}
 
         text_type = agate.Text(**type_kwargs)
+        number_type = agate.Number(locale=self.args.locale, **type_kwargs)
 
-        if self.args.no_inference:
+        if getattr(self.args, 'no_inference', None):
             types = [text_type]
+        elif getattr(self.args, 'infer_only_numbers', None):
+            types = [number_type, text_type]
         else:
-            number_type = agate.Number(locale=self.args.locale, **type_kwargs)
-
             # See the order in the `agate.TypeTester` class.
             types = [
                 agate.Boolean(**type_kwargs),

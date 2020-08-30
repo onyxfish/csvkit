@@ -72,6 +72,17 @@ class TestCSVFormat(CSVKitTestCase, EmptyFileTests):
 
         input_file.close()
 
+    def test_numeric_inference(self):
+        input_file = six.StringIO('a,b,c\na,2,3\n')
+
+        with stdin_as_string(input_file):
+            self.assertLines(['-U', '2'], [
+                '"a","b","c"',
+                '"a",2,3',
+            ])
+
+        input_file.close()
+
     def test_escapechar(self):
         input_file = six.StringIO('a,b,c\n1"2,3,4\n')
 

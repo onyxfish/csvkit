@@ -9,7 +9,7 @@ from csvkit.cli import CSVKitUtility
 
 class CSVFormat(CSVKitUtility):
     description = 'Convert a CSV file to a custom output format.'
-    override_flags = ['L', 'blanks', 'date-format', 'datetime-format']
+    override_flags = ['blanks', 'date-format', 'datetime-format']
 
     def add_arguments(self):
         self.argparser.add_argument('-D', '--out-delimiter', dest='out_delimiter',
@@ -49,9 +49,17 @@ class CSVFormat(CSVKitUtility):
         if self.additional_input_expected():
             sys.stderr.write('No input file or piped data provided. Waiting for standard input:\n')
 
-        reader = agate.csv.reader(self.skip_lines(), **self.reader_kwargs)
+        if self.args.out_quoting == 2:
+            self.args.infer_only_numbers = True
+        else:
+            self.args.no_inference = True
+        self.reader_kwargs['column_types'] = self.get_column_types()
+
+        table = agate.Table.from_csv(self.skip_lines(), **self.reader_kwargs)
         writer = agate.csv.writer(self.output_file, **self.writer_kwargs)
-        writer.writerows(reader)
+        if not self.args.no_header_row:
+            writer.writerow(table.column_names)
+        writer.writerows(table.rows)
 
 
 def launch_new_instance():
