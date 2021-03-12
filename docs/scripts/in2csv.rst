@@ -21,7 +21,7 @@ The header line is required though the columns may be in any order::
                   [-S] [--blanks] [--date-format DATE_FORMAT]
                   [--datetime-format DATETIME_FORMAT] [-H] [-K SKIP_LINES] [-v]
                   [-l] [--zero] [-V] [-f FILETYPE] [-s SCHEMA] [-k KEY] [-n]
-                  [--sheet SHEET] [--write-sheets WRITE_SHEETS]
+                  [--sheet SHEET] [--write-sheets WRITE_SHEETS [--write-sheet-names]]
                   [--encoding-xls ENCODING_XLS] [-y SNIFF_LIMIT] [-I]
                   [FILE]
 
@@ -47,6 +47,9 @@ The header line is required though the columns may be in any order::
       --write-sheets WRITE_SHEETS
                             The names of the Excel sheets to write to files, or
                             "-" to write all sheets.
+      --write-sheet-names   Use the sheet name to create the target filename when using --write-sheets.
+      -r, --regular-expression
+                            Use regular expression to identify Excel sheet names when using --write-sheets.
       -y SNIFF_LIMIT, --snifflimit SNIFF_LIMIT
                             Limit CSV dialect sniffing to the specified number of
                             bytes. Specify "0" to disable sniffing entirely.
