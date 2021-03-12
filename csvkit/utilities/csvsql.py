@@ -49,7 +49,7 @@ class CSVSQL(CSVKitUtility):
                                     help='Drop the table before creating. Only valid when --insert is specified and --no-create is not specified.')
         self.argparser.add_argument('--db-schema', dest='db_schema',
                                     help='Optional name of database schema to create table(s) in.')
-        self.argparser.add_argument('-y', '--snifflimit', dest='sniff_limit', type=int,
+        self.argparser.add_argument('-y', '--snifflimit', dest='sniff_limit', type=int, default=1024,
                                     help='Limit CSV dialect sniffing to the specified number of bytes. Specify "0" to disable sniffing entirely.')
         self.argparser.add_argument('-I', '--no-inference', dest='no_inference', action='store_true',
                                     help='Disable type inference when parsing the input.')

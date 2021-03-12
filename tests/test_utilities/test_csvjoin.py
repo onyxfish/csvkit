@@ -74,7 +74,7 @@ class TestCSVJoin(CSVKitTestCase, EmptyFileTests):
             ['3', 'b', 'c', '', '', '', '', ''],
         ])
 
-    def test_sniff_limit_no_limit(self):
+    def test_sniff_limit_default(self):
         self.assertRows(['examples/join_a.csv', 'examples/sniff_limit.csv'], [
             ['a', 'b', 'c', 'a2', 'b2', 'c2'],
             ['1', 'b', 'c', 'True', '2', '3'],

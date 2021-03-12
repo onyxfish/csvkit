@@ -105,7 +105,7 @@ class TestCSVLook(CSVKitTestCase, EmptyFileTests):
             '| 1 | 4 | 5 |',
         ])
 
-    def test_sniff_limit_no_limit(self):
+    def test_sniff_limit_default(self):
         self.assertLines(['examples/sniff_limit.csv'], [
             '|    a | b | c |',
             '| ---- | - | - |',

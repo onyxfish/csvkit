@@ -15,7 +15,7 @@ class CSVSort(CSVKitUtility):
                                     help='A comma separated list of column indices, names or ranges to sort by, e.g. "1,id,3-5". Defaults to all columns.')
         self.argparser.add_argument('-r', '--reverse', dest='reverse', action='store_true',
                                     help='Sort in descending order.')
-        self.argparser.add_argument('-y', '--snifflimit', dest='sniff_limit', type=int,
+        self.argparser.add_argument('-y', '--snifflimit', dest='sniff_limit', type=int, default=1024,
                                     help='Limit CSV dialect sniffing to the specified number of bytes. Specify "0" to disable sniffing entirely.')
         self.argparser.add_argument('-I', '--no-inference', dest='no_inference', action='store_true',
                                     help='Disable type inference when parsing the input.')

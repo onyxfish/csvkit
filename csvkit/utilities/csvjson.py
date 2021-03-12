@@ -40,7 +40,7 @@ class CSVJSON(CSVKitUtility):
                                     help='Disable the calculation of a bounding box.')
         self.argparser.add_argument('--stream', dest='streamOutput', action='store_true',
                                     help='Output JSON as a stream of newline-separated objects, rather than an as an array.')
-        self.argparser.add_argument('-y', '--snifflimit', dest='sniff_limit', type=int,
+        self.argparser.add_argument('-y', '--snifflimit', dest='sniff_limit', type=int, default=1024,
                                     help='Limit CSV dialect sniffing to the specified number of bytes. Specify "0" to disable sniffing entirely.')
         self.argparser.add_argument('-I', '--no-inference', dest='no_inference', action='store_true',
                                     help='Disable type inference (and --locale, --date-format, --datetime-format) when parsing CSV input.')

@@ -48,7 +48,7 @@ class In2CSV(CSVKitUtility):
                                     help='The names of the Excel sheets to write to files, or "-" to write all sheets.')
         self.argparser.add_argument('--encoding-xls', dest='encoding_xls',
                                     help='Specify the encoding of the input XLS file.')
-        self.argparser.add_argument('-y', '--snifflimit', dest='sniff_limit', type=int,
+        self.argparser.add_argument('-y', '--snifflimit', dest='sniff_limit', type=int, default=1024,
                                     help='Limit CSV dialect sniffing to the specified number of bytes. Specify "0" to disable sniffing entirely.')
         self.argparser.add_argument('-I', '--no-inference', dest='no_inference', action='store_true',
                                     help='Disable type inference (and --locale, --date-format, --datetime-format) when parsing CSV input.')

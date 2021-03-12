@@ -98,7 +98,7 @@ class CSVStat(CSVKitUtility):
                                     help='The maximum number of frequent values to display.')
         self.argparser.add_argument('--count', dest='count_only', action='store_true',
                                     help='Only output total row count.')
-        self.argparser.add_argument('-y', '--snifflimit', dest='sniff_limit', type=int,
+        self.argparser.add_argument('-y', '--snifflimit', dest='sniff_limit', type=int, default=1024,
                                     help='Limit CSV dialect sniffing to the specified number of bytes. Specify "0" to disable sniffing entirely.')
 
     def main(self):
