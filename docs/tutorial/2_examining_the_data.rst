@@ -7,7 +7,7 @@ csvstat: statistics without code
 
 In the previous section we saw how we could use :doc:`csvlook` and :doc:`csvcut` to view slices of our data. This is a good tool for exploring a dataset, but in practice we usually need to get the broadest possible view before we can start diving into specifics.
 
-:doc:`/scripts/csvstat` is designed to give us just such a broad understanding of our data. Inspired by the ``summary()`` function from the computational statistics programming language `"R" <http://www.r-project.org/>`_, :doc:`/scripts/csvstat` will generate summary statistics for all the data in a CSV file.
+:doc:`/scripts/csvstat` is designed to give us just such a broad understanding of our data. Inspired by the ``summary()`` function from the computational statistics programming language `"R" <https://www.r-project.org/>`_, :doc:`/scripts/csvstat` will generate summary statistics for all the data in a CSV file.
 
 Let's examine summary statistics for a few columns from our dataset. As we learned in the last section, we can use :doc:`/scripts/csvcut` and a pipe to pick out the columns we want:
 

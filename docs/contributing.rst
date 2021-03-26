@@ -29,7 +29,7 @@ Set up your environment for development::
 Principles of development
 =========================
 
-csvkit is to tables as Unix text processing commands (cut, grep, cat, sort) are to text. As such, csvkit adheres to `the Unix philosophy <http://en.wikipedia.org/wiki/Unix_philosophy>`_.
+csvkit is to tables as Unix text processing commands (cut, grep, cat, sort) are to text. As such, csvkit adheres to `the Unix philosophy <https://en.wikipedia.org/wiki/Unix_philosophy>`_.
 
 #. Small is beautiful.
 #. Make each program do one thing well.
@@ -66,7 +66,7 @@ A note on new tools
 
 As a general rule, csvkit is no longer adding new tools. This is the result of limited maintenance time as well as a desire to keep the toolkit focused on the most common use cases. Exceptions may be made to this rule on a case-by-case basis. We, of course, welcome patches to improve existing tools or add useful features.
 
-If you decide to build your own tool, we encourage you to create and maintain it as a separate Python package. You will probably want to use the `agate <http://agate.readthedocs.io/>`_ library, which csvkit uses for most of its CSV reading and writing. Doing so will safe time and make it easier to maintain common behavior with csvkit’s core tools.
+If you decide to build your own tool, we encourage you to create and maintain it as a separate Python package. You will probably want to use the `agate <https://agate.readthedocs.io/>`_ library, which csvkit uses for most of its CSV reading and writing. Doing so will safe time and make it easier to maintain common behavior with csvkit’s core tools.
 
 Streaming versus buffering
 ==========================
@@ -100,4 +100,4 @@ Legalese
 
 To the extent that contributors care, they should keep the following legal mumbo-jumbo in mind:
 
-The source of csvkit and therefore of any contributions are licensed under the permissive `MIT license <http://www.opensource.org/licenses/mit-license.php>`_. By submitting a patch or pull request you are agreeing to release your contribution under this license. You will be acknowledged in the AUTHORS file. As the owner of your specific contributions you retain the right to privately relicense your specific contributions (and no others), however, the released version of the code can never be retracted or relicensed.
+The source of csvkit and therefore of any contributions are licensed under the permissive `MIT license <https://www.opensource.org/licenses/mit-license.php>`_. By submitting a patch or pull request you are agreeing to release your contribution under this license. You will be acknowledged in the AUTHORS file. As the owner of your specific contributions you retain the right to privately relicense your specific contributions (and no others), however, the released version of the code can never be retracted or relicensed.

@@ -28,7 +28,7 @@ Processing
 
 To change field values (i.e. to run ``sed`` or ``awk``-like commands on CSV files), consider `miller <https://github.com/johnkerl/miller>`_ (``mlr put``).
 
-To transpose CSVs, consider `csvtool <http://colin.maudry.com/csvtool-manual-page/>`_. Install ``csvtool`` on Linux using your package manager, or on macOS using::
+To transpose CSVs, consider `csvtool <https://colin.maudry.com/csvtool-manual-page/>`_. Install ``csvtool`` on Linux using your package manager, or on macOS using::
 
     brew install ocaml
     opam install csv
@@ -50,7 +50,7 @@ Output and Analysis
 
 * To draw plots, consider `jp <https://github.com/sgreben/jp>`_.
 * To diff CSVs, consider `daff <https://github.com/paulfitz/daff>`_.
-* To explore CSVs interactively, consider `VisiData <http://visidata.org>`_.
+* To explore CSVs interactively, consider `VisiData <https://visidata.org>`_.
 
 Alternatives to :doc:`csvsql` are `q <https://github.com/harelba/q>`_ and `textql <https://github.com/dinedal/textql>`_.
 

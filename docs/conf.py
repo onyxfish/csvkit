@@ -20,7 +20,7 @@ extensions = ['sphinx.ext.autodoc', 'sphinx.ext.intersphinx']
 autodoc_member_order = 'bysource'
 
 intersphinx_mapping = {
-    'python': ('http://docs.python.org/3.5/', None)
+    'python': ('https://docs.python.org/3.5/', None)
 }
 
 # Add any paths that contain templates here, relative to this directory.

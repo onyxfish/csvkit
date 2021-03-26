@@ -72,7 +72,7 @@ Generate SQL statements for a CSV file or execute those statements directly on a
 
 See also: :doc:`../common_arguments`.
 
-For information on connection strings and supported dialects refer to the `SQLAlchemy documentation <http://www.sqlalchemy.org/docs/dialects/>`_.
+For information on connection strings and supported dialects refer to the `SQLAlchemy documentation <https://www.sqlalchemy.org/docs/dialects/>`_.
 
 If you prefer not to enter your password in the connection string, store the password securely in a `PostgreSQL Password File <https://www.postgresql.org/docs/9.1/static/libpq-pgpass.html>`_, a `MySQL Options File <https://dev.mysql.com/doc/refman/5.7/en/option-files.html>`_ or similar files for other systems.
 

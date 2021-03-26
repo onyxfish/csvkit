@@ -28,7 +28,7 @@ It is inspired by pdftk, GDAL and the original csvcut tool by Joe Germuska and A
 
 Important links:
 
-* Documentation: http://csvkit.rtfd.org/
+* Documentation: https://csvkit.rtfd.org/
 * Repository:    https://github.com/wireservice/csvkit
 * Issues:        https://github.com/wireservice/csvkit/issues
 * Schemas:       https://github.com/wireservice/ffs

@@ -7,7 +7,7 @@ About this tutorial
 
 There is no better way to learn how to use a new tool than to see it applied in a real world situation. To that end, this tutorial explains how to use csvkit tools by analyzing a real dataset.
 
-The data we will be using is a subset of the United States Defense Logistic Agency Law Enforcement Support Office's (LESO) 1033 Program dataset, which describes how surplus military arms have been distributed to local police forces. This data was widely cited in the aftermath of the Ferguson, Missouri protests. The particular data we are using comes from an `NPR report <http://www.npr.org/2014/09/02/342494225/mraps-and-bayonets-what-we-know-about-the-pentagons-1033-program>`_ analyzing the data.
+The data we will be using is a subset of the United States Defense Logistic Agency Law Enforcement Support Office's (LESO) 1033 Program dataset, which describes how surplus military arms have been distributed to local police forces. This data was widely cited in the aftermath of the Ferguson, Missouri protests. The particular data we are using comes from an `NPR report <https://www.npr.org/2014/09/02/342494225/mraps-and-bayonets-what-we-know-about-the-pentagons-1033-program>`_ analyzing the data.
 
 This tutorial assumes you have some basic familiarity with the command line. If you don't have much experience, fear not! This has been written with beginners in mind. No prior experience with data processing or analysis is assumed.
 
@@ -24,7 +24,7 @@ If you have problems installing, look for help  in the :doc:`../tricks` section 
 
 .. note::
 
-    If you're familiar with `virtualenv <http://virtualenv.readthedocs.org/en/latest/>`_, it is better to install csvkit in its own environment. If you are doing this, then you should leave off the ``sudo`` in the previous command.
+    If you're familiar with `virtualenv <https://virtualenv.readthedocs.org/en/latest/>`_, it is better to install csvkit in its own environment. If you are doing this, then you should leave off the ``sudo`` in the previous command.
 
 Getting the data
 ================

@@ -81,7 +81,7 @@ Now let's see what's in there:
 
     Row count: 93
 
-As you can see, this data file contains population estimates for each county in Nebraska from the 2012 5-year ACS estimates. This data was retrieved from `Census Reporter <http://censusreporter.org/>`_ and reformatted slightly for this example. Let's join it to our equipment data:
+As you can see, this data file contains population estimates for each county in Nebraska from the 2012 5-year ACS estimates. This data was retrieved from `Census Reporter <https://censusreporter.org/>`_ and reformatted slightly for this example. Let's join it to our equipment data:
 
 .. code-block:: bash
 

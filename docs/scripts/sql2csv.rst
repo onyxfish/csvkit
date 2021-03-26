@@ -46,6 +46,6 @@ You can even use it as a simple SQL calculator (in this example an in-memory SQL
 
     sql2csv --query "select 300 * 47 % 14 * 27 + 7000"
 
-The connection string `accepts parameters <http://docs.sqlalchemy.org/en/rel_1_0/core/engines.html#engine-creation-api>`_. For example, to set the encoding of a MySQL database::
+The connection string `accepts parameters <https://docs.sqlalchemy.org/en/rel_1_0/core/engines.html#engine-creation-api>`_. For example, to set the encoding of a MySQL database::
 
     sql2csv --db 'mysql://user:pass@host/database?charset=utf8' --query "SELECT myfield FROM mytable"
