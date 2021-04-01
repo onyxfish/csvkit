@@ -8,7 +8,8 @@ install_requires = [
     'agate-excel>=0.2.2',
     'agate-dbf>=0.2.0',
     'agate-sql>=0.5.3',
-    'six>=1.6.1'
+    'six>=1.6.1',
+    'setuptools',
 ]
 
 if sys.version_info < (2, 7):
